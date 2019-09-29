@@ -44,7 +44,7 @@ index=zeek  172.16.1.125 sourcetype="bro:dhcp:json"
 |  dedup host_name
 ```
 ___
-Determine the Windows user account name used on the infected Windows client.
+Determine the Windows user account name used on the infected Windows client.  
 **anatoliy.demchuk/MARICHEIKA.NET**
 ```
 index=zeek 172.16.1.125 sourcetype="bro:kerberos:json" 
