@@ -51,8 +51,9 @@ index=zeek 172.16.1.125 sourcetype="bro:kerberos:json"
 | dedup client 
 | table client
 ```
+___
 Determine the SHA256 hash of the Word document downloaded by the victim.
-I dont naturally remember mimetypes all that well so I usually use `index=zeek 172.16.1.125 | stats count by mime_type` to list them. We see that there was only one so we can easily pivot to that;  
+I don't naturally remember mimetypes all that well so I usually use `index=zeek 172.16.1.125 | stats count by mime_type` to list them. We see that there was only one word doc so we can easily pivot to that;  
 ```
 index=zeek 172.16.1.125 mime_type="application/msword" 
 | table sha256 filename
@@ -61,5 +62,6 @@ Determine the type of malware used in the initial infection.
 **Hancitor**
 https://www.virustotal.com/gui/file/e2b0c9f57dcf08c0e14456f5cb54d8e50714c8e7a3a88cf818896dc8ba1dba51/detection
 *If this is a repetitive action, I recommend setting up a "workflow action" in Splunk to quickly pivot from Splunk to Virustotal.*
+___
 Determine the public IP address of the infected Windows client.  
 This information is unavailable in Bro data as it doesn't show up in protocol specific metadata. 
