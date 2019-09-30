@@ -86,14 +86,14 @@ index=zeek [ search index=zeek sourcetype="bro:files:json" mime_type=application
 |  stats count by sourcetype
 ```
 ___
-Determine the two families of malware the Windows client was infected with.
+Determine the two families of malware the Windows client was infected with.  
 **Trickbot (2 exes), emotet, unknown downloader as well**
 ```
 index=zeek 10.1.75.167 sourcetype="bro:files:json" 
 | table _time filename mime_type sha256
 ```
 ___
-Determine the one family of malware the DC was infected with.
+Determine the one family of malware the DC was infected with.  
 **trickbot**  
 ```
 index=zeek 10.1.75.4 sourcetype="bro:files:json" attachment_type="application/x-dosexec" 
@@ -107,5 +107,5 @@ index=zeek sourcetype="bro:intel:json"
     | table uid]
 ```
 ___
-Determine the public IP address of the infected Windows client.
+Determine the public IP address of the infected Windows client.  
 **Not available in the protocol data**
