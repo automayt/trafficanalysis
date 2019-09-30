@@ -58,6 +58,7 @@ I don't naturally remember mimetypes all that well so I usually use `index=zeek 
 index=zeek 172.16.1.125 mime_type="application/msword" 
 | table sha256 filename
 ```
+___
 Determine the type of malware used in the initial infection.  
 **Hancitor**
 https://www.virustotal.com/gui/file/e2b0c9f57dcf08c0e14456f5cb54d8e50714c8e7a3a88cf818896dc8ba1dba51/detection
