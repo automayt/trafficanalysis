@@ -99,6 +99,13 @@ Determine the one family of malware the DC was infected with.
 index=zeek 10.1.75.4 sourcetype="bro:files:json" attachment_type="application/x-dosexec" 
 |  dedup sha256
 ```
+Another fun related search is this one that will show you all of the intel hits related to only these files;  
+```
+index=zeek sourcetype="bro:intel:json" 
+    [ search index=zeek sourcetype="bro:files:json" 
+    | rename conn_uids as uid 
+    | table uid]
+```
 ___
 Determine the public IP address of the infected Windows client.
 **Not available in the protocol data**
