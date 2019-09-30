@@ -1,7 +1,12 @@
 # trafficanalysis
-The repo is a dump of PCAPs and documents surrounding analysis of those PCAPs using Zeek logs via Splunk. Each PCAP has a corresponding text file that is just the same filename with .md appended to it. I've preserved these in two different directories, and the PCAPs are just for archive purposes (in case Malware-Traffic-Analysis.net is down or something). In any case, I highly recommend not using the pcaps, but instead using the mta tool to pull from Malware-Traffic-Analysis.net and automatically replay through your interface. I'm using ens160 in the snippet below, so change it to whatever your monitoring interface is.
+The repo is a dump of PCAPs and documents surrounding analysis of those PCAPs using Zeek logs via Splunk. Each PCAP has a corresponding text file that is just the same filename with .md appended to it. I've preserved these in two different directories, and the PCAPs are just for archive purposes (in case Malware-Traffic-Analysis.net is down or something).  
+
+I highly recommend not using the pcaps included here, but instead using the mta tool to pull from Malware-Traffic-Analysis.net since it will automatically unzip and replay through your interface at a "not-to-slow" but "not-to-fast" speed. I'm using ens160 in the snippet below, so change it to whatever your monitoring interface is.
 
 Most of these pcaps are courtesy of the excellent Malware-Traffic-Analysis.net.
+
+**exercises/ - CTFs, war games, simulations, tests**  
+**malware/ - malware captures**
 
 Add this to ~/.bashrc or ~/.bash_profile to add 2 new alias commands that both just get pcaps as arguments. Both use ens160 interface. You'll need to refresh your session to make sure the updated bashrc is working as intended.
 ```
